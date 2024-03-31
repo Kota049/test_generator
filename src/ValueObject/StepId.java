@@ -6,6 +6,9 @@ public class StepId implements Id {
     private final int value;
 
     public StepId(int value) {
+        if (Objects.isNull(value)){
+            throw new Exception("invalid id error");
+        }
         this.value = value;
     }
     @Override
