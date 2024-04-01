@@ -11,4 +11,8 @@ public class Assert {
         this.targetType = TargetType.valueOf(targetType);
         this.target = target;
     }
+
+    public String generateLine() {
+        return this.targetType.getAssertion().replace("{content}", this.target);
+    }
 }

@@ -14,7 +14,7 @@ public class Action {
         this.target = target;
     }
 
-    public String GererateLine() {
+    public String gererateLine() {
         final String locator = this.targetType.getTemplate().replace("{content}", this.target);
         return String.format("await %s.%s ;", locator, actionContent);
     }
